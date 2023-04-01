@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    display: flex;
+    justify-content: center
+}
+
+.content-box {
+    box-shadow: 0 0 10px 3px #ddd;
+    border-radius: 3px;
+    text-align: center;
+    padding: 60px 30px;
+    margin-top: -150px;
+    animation: animate .5s forwards ease-out
+}
+
+@keyframes animate {
+    0% {
+        margin-top: -150px
+    }
+
+    100% {
+        margin-top: 150px
+    }
+}
+
+.content-box img {
+    width: 150px;
+    margin-bottom: 25px
+}
+
+.content-box .inputGroup {
+    position: relative
+}
+
+.content-box .inputGroup .lock::after {
+    content: "\f023";
+    font-family: "Font Awesome 5 Free";
+    color: #666;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 1
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+    display: none
+}
+
+.content-box .inputGroup input {
+    width: 250px;
+    height: 35px;
+    position: relative;
+    padding: 0 40px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    line-height: 1.5;
+    color: #555
+}
+
+.content-box .inputGroup input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+.content-box .inputGroup .eye-open::after {
+    content: "\f06e";
+    font-family: "Font Awesome 5 Free";
+    color: #999;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1
+}
+
+.content-box .inputGroup .eye-close::after {
+    content: "\f070";
+    font-family: "Font Awesome 5 Free";
+    color: #999;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1
+}
+
+.content-box .inputGroup .errorMsg {
+    color: #f60;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.5;
+    position: absolute
+}
+
+.content-box button {
+    width: 330px;
+    color: #fff;
+    background-color: #58bf14;
+    border: none;
+    padding: 7px 0;
+    border-radius: 4px;
+    margin-top: 35px
+}
+
+.content-box button:hover {
+    background-color: #4da812
+}
+
+.content-box button:focus {
+    box-shadow: inset 0 0 1px 1px #000
+}
+
+.content-box details {
+    color: #999;
+    line-height: 1.5;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 20px;
+    width: 330px
+}
